@@ -6,9 +6,10 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 # Create your views here.
 
 class JobListAPIView(generics.ListCreateAPIView):
-    queryset = Job.objects.all()
     serializer_class = JobSerializer
     permission_classes = [IsAuthenticated]
+    queryset = Job.objects.all()
+    
 
     # def get_queryset(self):
     #     user = self.request.user
