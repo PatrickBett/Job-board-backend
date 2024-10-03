@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'job',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -135,7 +136,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
-     'https://job-board-bg3q.onrender.com/'
+     'https://job-board-bg3q.onrender.com'
 ]
 
 SIMPLE_JWT = {
