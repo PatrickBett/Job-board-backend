@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Job,Comment,Post,Application
+from .models import Job,Post
+# from .models import Job,Comment,Post,Application
 
 # Register your models here.
 
@@ -23,21 +24,21 @@ class PostAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 
-class CommentAdmin(admin.ModelAdmin):
+# class CommentAdmin(admin.ModelAdmin):
     
-    list_display = ('comment','user','post')
+#     list_display = ('comment','user','post')
     
-    search_fields = ('content',)
+#     search_fields = ('content',)
     
-    list_filter = ('time',)
+#     list_filter = ('time',)
 
-admin.site.register(Comment, CommentAdmin)
+# admin.site.register(Comment, CommentAdmin)
 
-class ApplicationAdmin(admin.ModelAdmin):
+# class ApplicationAdmin(admin.ModelAdmin):
     
-    list_display = ('user','job','resume')
+#     list_display = ('user','job','resume')
 
     
-    list_filter = ('time',)
+#     list_filter = ('time',)
 
-admin.site.register(Application, ApplicationAdmin)
+# admin.site.register(Application, ApplicationAdmin)
