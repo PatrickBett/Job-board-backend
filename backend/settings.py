@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u_afip6_oi-fy53cvgs+&im62t6m4w9k(sldpf2@s#cqn7xc@s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','https://job-board-bg3q.onrender.com/']
+ALLOWED_HOSTS = ['*','https://job-board-bg3q.onrender.com/','http://localhost:5174/']
 
 
 # Application definition
@@ -136,7 +136,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
-     'https://job-board-bg3q.onrender.com'
+     'https://job-board-bg3q.onrender.com',
+     'http://localhost:5174/'
      
 ]
 
