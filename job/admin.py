@@ -28,7 +28,7 @@ class CommentAdmin(admin.ModelAdmin):
     
     list_display = ('comment','user','post')
     
-    search_fields = ('content',)
+    search_fields = ('comment',)
     
     list_filter = ('time',)
 

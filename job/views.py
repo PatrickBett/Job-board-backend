@@ -42,4 +42,6 @@ class CommentCreateListAPIView(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
 
     def perform_create(self, serializer):
-        serializer.save(post = self.request.post, user = self.request.user)
+        post_id = self.request.data.get('post')  # Get post ID from the request
+        post = Post.objects.get(id=post_id)  # Retrieve the post
+        serializer.save(post = post, user = self.request.user)

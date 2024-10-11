@@ -38,4 +38,4 @@ class CommentSerializer(serializers.ModelSerializer):
     post = PostSerializer(read_only = True)
     class Meta:
         model = Comment
-        fields ="__all__"
+        fields = fields = ["id", "user", "post", "comment", "time"]    
