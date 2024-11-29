@@ -78,20 +78,21 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 #
-DATABASES = {
-    'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
-   }
-}
+# DATABASES = {
+#     'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+# }
 
 
 
 # Render Postgress (Live)
-# import dj_database_url
-# DATABASES = {
-#     'default':dj_database_url.parse('postgresql://joboarddatabase_user:zNlTC24CXaOAzhtkxP5O8zAfEV2iha94@dpg-crv7mhe8ii6s738mv4rg-a.oregon-postgres.render.com/joboarddatabase')
-# }
+import dj_database_url
+DATABASES = {
+    'default':dj_database_url.parse('postgresql://joboarddatabase_ivn0_user:rSIm1oAbTVbsdlt0MxC7MnTjo4aiMFyr@dpg-ct5538o8fa8c73bsrgu0-a.oregon-postgres.render.com/joboarddatabase_ivn0')
+                                     
+}
 
 
 # Password validation
