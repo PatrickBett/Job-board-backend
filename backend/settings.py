@@ -91,7 +91,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 import dj_database_url
 DATABASES = {
     'default':dj_database_url.parse('postgresql://joboarddatabase_ivn0_user:rSIm1oAbTVbsdlt0MxC7MnTjo4aiMFyr@dpg-ct5538o8fa8c73bsrgu0-a.oregon-postgres.render.com/joboarddatabase_ivn0')
-                                     
 }
 
 
