@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u_afip6_oi-fy53cvgs+&im62t6m4w9k(sldpf2@s#cqn7xc@s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','https://job-board-bg3q.onrender.com/','http://localhost:5174/']
+ALLOWED_HOSTS = ['*','https://job-board-bg3q.onrender.com/','http://localhost:5173/']
 
 
 # Application definition
@@ -78,20 +78,20 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 #
-# DATABASES = {
-#     'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }
-
-
-
-# Render Postgress (Live)
-import dj_database_url
 DATABASES = {
-    'default':dj_database_url.parse('postgresql://joboarddatabase_ivn0_user:rSIm1oAbTVbsdlt0MxC7MnTjo4aiMFyr@dpg-ct5538o8fa8c73bsrgu0-a.oregon-postgres.render.com/joboarddatabase_ivn0')
+    'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+   }
 }
+
+
+
+# # Render Postgress (Live)
+# import dj_database_url
+# DATABASES = {
+#     'default':dj_database_url.parse('postgresql://joboarddatabase_ivn0_user:rSIm1oAbTVbsdlt0MxC7MnTjo4aiMFyr@dpg-ct5538o8fa8c73bsrgu0-a.oregon-postgres.render.com/joboarddatabase_ivn0')
+# }
 
 
 # Password validation
@@ -138,7 +138,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
      'https://job-board-bg3q.onrender.com',
-     'http://localhost:5174'
+     'http://localhost:5173'
      
 ]
 
