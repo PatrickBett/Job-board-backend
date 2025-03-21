@@ -5,6 +5,9 @@ from .serializer import JobSerializer, UserSerializer, PostSerializer, Applicati
 from rest_framework import generics
 from django.contrib.auth.models import User
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 # Create your views here.
 
 class JobListAPIView(generics.ListCreateAPIView):
@@ -45,3 +48,16 @@ class CommentCreateListAPIView(generics.ListCreateAPIView):
         post_id = self.request.data.get('post')  # Get post ID from the request
         post = Post.objects.get(id=post_id)  # Retrieve the post
         serializer.save(post = post, user = self.request.user)
+
+class UserApiView(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self,request):
+        user = request.user
+
+        return Response({
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+            "first_name": user.first_name,
+            "last_name": user.last_name
+        })
