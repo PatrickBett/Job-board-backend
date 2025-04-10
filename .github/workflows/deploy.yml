@@ -3,10 +3,10 @@ name: Django CI/CD
 on:
   push:
     branches:
-      - master  # Trigger the action when pushing to the 'master' branch
+      - main  # Trigger the action when pushing to the 'master' branch
   pull_request:
     branches:
-      - master  # Trigger on pull requests targeting the 'master' branch
+      - main  # Trigger on pull requests targeting the 'master' branch
 
 jobs:
   test:
