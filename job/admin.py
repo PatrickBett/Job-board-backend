@@ -1,7 +1,10 @@
 from django.contrib import admin
 # from .models import Job,Post
-from .models import Job,Comment,Post,Application
-
+from .models import Job,Comment,Post,Application,UserProfile, Skill, Language, Education
+admin.site.register(UserProfile)
+admin.site.register(Skill)
+admin.site.register(Language)
+admin.site.register(Education)
 # Register your models here.
 
 class JobAdmin(admin.ModelAdmin):

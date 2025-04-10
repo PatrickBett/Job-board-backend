@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Job,Post,Comment,Application
+from .models import Job,Post,Comment,Application,UserProfile, Skill, Language, Education
 # from .models import Job,Post
 from django.contrib.auth.models import User
 
@@ -39,3 +39,33 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = fields = ["id", "user", "post", "comment", "time"]    
+
+
+class SkillSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Skill
+        fields = ['id', 'name', 'proficiency']
+        read_only_fields = ['id']
+
+class LanguageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Language
+        fields = ['id', 'name', 'proficiency']
+        read_only_fields = ['id']
+
+class EducationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Education
+        fields = ['id', 'institution', 'degree', 'field_of_study', 'start_date', 'end_date', 'current']
+        read_only_fields = ['id']
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)
+    skills = SkillSerializer(many=True, read_only=True)
+    languages = LanguageSerializer(many=True, read_only=True)
+    education = EducationSerializer(many=True, read_only=True)
+    
+    class Meta:
+        model = UserProfile
+        fields = ['id', 'bio', 'location', 'birth_date', 'profile_picture', 'skills', 'languages', 'education','user']
+        # read_only_fields = ['id']
