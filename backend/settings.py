@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u_afip6_oi-fy53cvgs+&im62t6m4w9k(sldpf2@s#cqn7xc@s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','https://job-board-bg3q.onrender.com/','http://localhost:5173/']
+ALLOWED_HOSTS = ['*','https://job-board-bg3q.onrender.com/','http://localhost:5173/','https://jobboardsite.netlify.app']
 
 
 # Application definition
