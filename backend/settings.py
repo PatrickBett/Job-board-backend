@@ -138,7 +138,8 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
      'https://job-board-bg3q.onrender.com',
-     'http://localhost:5173'
+     'http://localhost:5173',
+     'https://jobboardsite.netlify.app'
      
 ]
 
