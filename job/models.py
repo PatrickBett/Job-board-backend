@@ -92,3 +92,11 @@ class Education(models.Model):
     
     def __str__(self):
         return f"{self.degree} from {self.institution}"
+    
+class Review(models.Model):
+    user = models.ForeignKey(User,on_delete= models.CASCADE,  related_name="reviews")
+    review = models.TextField()
+    time = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.review
